@@ -3,6 +3,7 @@ extends CharacterBody2D
 var move_speed = 350
 var rocket_scene = preload("res://scenes/rocket.tscn")
 @onready var rocket_container = $RocketContainer
+signal took_damage
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -32,3 +33,8 @@ func shoot():
 	rocket_instance.global_position = global_position
 	rocket_instance.global_position.x += 80
 	
+func take_damage():
+	emit_signal("took_damage")
+	
+func die():
+	queue_free()
