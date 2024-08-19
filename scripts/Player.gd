@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var move_speed = 350
-var rocket_scene = preload("res://rocket.tscn")
+var rocket_scene = preload("res://scenes/rocket.tscn")
 @onready var rocket_container = $RocketContainer
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
