@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuybsnnhx8tf2"]
+
+[ext_resource type="PackedScene" uid="uid://b2dw46fjg8vhd" path="res://scenes/enemy.tscn" id="1_4wv6q"]
+[ext_resource type="Script" path="res://scripts/path_enemy.gd" id="1_ala3s"]
+
+[sub_resource type="Curve2D" id="Curve2D_wyfj4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -126, 457, -56.5685, 79.196, 56.5685, -79.196, 208, 364, -130.108, -12.7279, 130.108, 12.7279, 600, 336, -144.25, -19.799, 144.25, 19.799, 797, 217, 0, 0, 0, 0, 1043, 167, 0, 0, 0, 0, 1133, 35, -39.7225, 54.1516, 39.7225, -54.1516, 1295, -49)
+}
+point_count = 7
+
+[node name="PathEnemy" type="Path2D"]
+curve = SubResource("Curve2D_wyfj4")
+script = ExtResource("1_ala3s")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(986.715, 194.828)
+rotation = -0.366805
+progress = 1207.74
+loop = false
+
+[node name="Enemy" parent="PathFollow2D" instance=ExtResource("1_4wv6q")]
+enemy_speed = 0

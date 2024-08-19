@@ -37,7 +37,7 @@ collision_mask = 2
 script = ExtResource("1_mhy88")
 
 [node name="FlameParticleEffect" type="GPUParticles2D" parent="."]
-position = Vector2(-39, 0)
+position = Vector2(-38, 0)
 amount = 150
 process_material = SubResource("ParticleProcessMaterial_tx16c")
 lifetime = 0.3
