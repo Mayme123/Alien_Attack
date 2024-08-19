@@ -8,8 +8,6 @@ radius = 16.0
 height = 74.0
 
 [node name="Rocket" type="Area2D"]
-collision_layer = 4
-collision_mask = 2
 script = ExtResource("1_8ya0u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
